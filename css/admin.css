@@ -1,0 +1,695 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #081a15; /* Hijau sangat gelap */
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background-color: #a38a5e; /* Warna cokelat/emas sesuai gambar */
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  padding: 0 30px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-radius: 12px; /* Membuat sudut bar melengkung halus */
+  position: relative;
+  display: block;
+}
+
+/* Tanda Transparan di Menu Aktif */
+ .nav-item.active {
+  background-color: rgba(255, 255, 255, 0.15); /* Bar transparan */
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Efek hover agar interaktif */
+.nav-item:hover:not(.active) {
+ background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.nav-links li {
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links li.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+}
+
+.nav-links li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 20px 40px;
+  overflow-y: auto;
+}
+
+/* TOP BAR */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #3498db; /* Biru placeholder */
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+}
+
+/* STATS CARDS */
+.stats-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  flex: 1;
+  background: linear-gradient(135deg, #2c4a41, #1e352f);
+  padding: 35px 25px;
+  border-radius: 35px; /* Sangat bulat sesuai gambar */
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.stat-label {
+  font-size: 13px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* CONTENT BOX */
+.content-box {
+  background-color: #1e352f;
+  padding: 25px;
+  border-radius: 35px;
+  margin-bottom: 25px;
+}
+
+.box-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.menu-terlaris-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-text-list {
+  padding-left: 20px;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.menu-images {
+  display: flex;
+  gap: 15px;
+}
+
+.image-placeholder {
+  width: 80px;
+  height: 100px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+}
+
+/* TABLE */
+.table-wrapper {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #a38a5e; /* Header tabel cokelat */
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* FOOTER BUTTON */
+.footer-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-report {
+  background-color: #a38a5e;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-report:hover {
+  background-color: #8e774f;
+}
+
+.top-dots {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: rgba(255, 255, 255, 0.2); /* Sangat transparan */
+  font-size: 28px;
+  letter-spacing: 3px;
+  user-select: none;
+}
+
+/* Gabungkan dengan CSS Dashboard sebelumnya */
+
+.menu-management {
+  background-color: rgba(30, 53, 47, 0.8);
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.page-inner-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.title-line {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-bottom: 30px;
+}
+
+.menu-category-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.category-header {
+  background-color: #a38a5e;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  padding: 5px 40px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.category-label {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 15px auto;
+  background-color: #a38a5e; /* Bar cokelat kategori */
+  padding: 5px 25px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.menu-table th {
+ padding: 12px 5px;
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.menu-table td {
+  padding: 12px;
+  font-size: 13px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.action-icons {
+  cursor: pointer;
+  letter-spacing: 10px;
+  filter: brightness(0) invert(1); /* Membuat icon jadi putih */
+}
+
+/* Style Sidebar Active Bar (Sesuai permintaan sebelumnya) */
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Menata isi kolom tindakan */
+.action-cell {
+  text-align: center;
+}
+
+.action-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.action-group button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  filter: brightness(0) invert(1); /* Membuat icon emoji/gambar jadi putih */
+  transition: 0.2s;
+}
+
+.action-group button:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7); /* Warna putih transparan */
+  cursor: pointer;
+  padding: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Efek saat kursor di atas icon */
+.btn-icon:hover {
+  color: #ffffff; /* Jadi putih terang */
+  transform: scale(1.1);
+}
+
+/* Ukuran SVG agar konsisten */
+.btn-icon svg {
+  display: block;
+}
+
+/* Container Khusus Halaman Pembayaran */
+.payment-management {
+  background-color: rgba(30, 53, 47, 0.9);
+  padding: 40px;
+  border-radius: 40px;
+  min-height: 500px;
+}
+
+.page-inner-title {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.title-line {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+/* Tabel Pembayaran */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table th {
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.payment-table td {
+  padding: 20px 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* Navigasi Sidebar - Penanda Transparan */
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.15); /* Bar transparan melengkung */
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Container Halaman Promo */
+.promo-management {
+  background-color: rgba(30, 53, 47, 0.9);
+  padding: 40px;
+  border-radius: 40px;
+  min-height: 450px;
+  position: relative;
+}
+
+/* Inner Card Transparan untuk Tabel */
+.promo-card-inner {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.promo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.promo-table th {
+  padding: 15px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.promo-table td {
+  padding: 15px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+/* Status Buttons */
+.status-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-post {
+  background-color: #94c693; /* Hijau Pastel */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn-hide {
+  background-color: #f8b1b1; /* Merah Muda/Pink Pastel */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+/* Tombol Tambah */
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-tambah {
+  background-color: #a38a5e; /* Warna Cokelat Emas */
+  color: white;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-tambah:hover {
+  background-color: #8c764d;
+}
+
+/* Styling Modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #1e352f;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 25px;
+  width: 350px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-content h4 { margin-bottom: 20px; color: white; }
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+}
+
+.modal-buttons { display: flex; justify-content: center; gap: 10px; }
+
+/* Container Berita Utama */
+.news-management {
+  background-color: rgba(30, 53, 47, 0.9);
+  padding: 40px;
+  border-radius: 40px;
+  min-height: 550px;
+}
+
+.inner-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.title-line {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 25px;
+}
+
+/* Item Berita */
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.news-thumbnail {
+  width: 100px;
+  height: 80px;
+  background-color: #d9d9d9; /* Warna abu-abu placeholder gambar di foto */
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.news-text h4 {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.item-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Penyesuaian Sidebar Active */
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Container Rating */
+.rating-management {
+    background-color: rgba(30, 53, 47, 0.9);
+    padding: 30px;
+    border-radius: 40px;
+    min-height: 500px;
+}
+
+.rating-header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.dots-icon {
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+/* List Items */
+.rating-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    align-items: flex-start;
+}
+
+.user-avatar-rect {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #ccc;
+    flex-shrink: 0;
+}
+
+.rating-details {
+    flex: 1;
+}
+
+.rating-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-top h4 {
+    color: #a8d5ba; /* Warna hijau muda untuk nama */
+    font-size: 16px;
+    margin: 0;
+}
+
+.stars {
+    color: #f1c40f; /* Kuning Emas */
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.star-off {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.order-info {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin: 0;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    color: #ff7675;
+    opacity: 1;
+}
+
+.item-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

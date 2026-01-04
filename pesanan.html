@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Admin - Daftar Pesanan</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Cafe Admin</h2>
+    <ul class="nav-links">
+      <li class="nav-item" onclick="location.href='index.html'">Dashboard</li>
+      <li class="nav-item" onclick="location.href='menu.html'">Menu</li>
+      <li class="nav-item active" onclick="location.href='pesanan.html'">Pesanan</li>
+      <li class="nav-item" onclick="location.href='pembayaran.html'">Pembayaran</li>
+      <li class="nav-item" onclick="location.href='promo.html'">Promo</li>      
+      <li class="nav-item" onclick="location.href='berita.html'">Berita</li>
+      <li class="nav-item" data-page="rating.html">Rating</li>
+      <li class="nav-item">Laporan</li>
+      <li class="nav-item">Pengaturan</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="user-info">
+        <span class="user-name">Hello, Admin</span>
+        <div class="avatar-wrapper">
+          <div class="avatar-circle"></div>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content-box order-management">
+      <div class="card-dots">•••</div>
+
+      <div class="order-header-tools">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search . . .">
+        </div>
+        <div class="filter-placeholder"></div>
+      </div>
+
+      <div class="table-container">
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>ID Pelanggan</th>
+              <th>Nama</th>
+              <th>Tanggal</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1020</td>
+              <td>Felicia</td>
+              <td>15/06/2025</td>
+              <td>Rp 52.000</td>
+              <td><span class="status-badge">Selesai</span></td>
+            </tr>
+            <tr>
+              <td>1019</td>
+              <td>Agni</td>
+              <td>10/12/2025</td>
+              <td>Rp 75.000</td>
+              <td><span class="status-badge">Selesai</span></td>
+            </tr>
+            <tr>
+              <td>1018</td>
+              <td>Nabila</td>
+              <td>01/01/2026</td>
+              <td>Rp 60.000</td>
+              <td><span class="status-badge">Selesai</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

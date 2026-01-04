@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Kinokimi Team</title>
+  <link rel="stylesheet" href="css/dev.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@scrollrevealjs/scrollreveal"></script>
+</head>
+<body>
+
+  <div class="blob-bg"></div>
+
+  <section class="about-section">
+    <div class="container">
+      <header class="about-header">
+        <span class="sub-title">Our Story</span>
+        <h1>Meet The <br><i>Kinokimi</i> Creators</h1>
+        <p>Kami adalah tim kreatif di balik Kinokimi, berdedikasi untuk memberikan pengalaman visual yang hangat dan estetik bagi setiap pengunjung.</p>
+      </header>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="image-wrapper">
+              <img src="image/dev1.jpg" alt="Developer 1">
+            </div>
+            <h3>Agni zahraeni</h3>
+            <p class="role">
+                UI/UX desainer
+                <br>
+                Developer
+                <br>
+                Conten Creator
+            </p>
+            <div class="socials">
+              <span>IG</span> • <span>LI</span> • <span>GH</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="card-inner main-card">
+            <div class="image-wrapper">
+              <img src="image/dev2.jpg" alt="Developer 2">
+            </div>
+            <h3>Felicia Chelsyneira</h3>
+            <p class="role">
+                UI/UX desainer
+                <br>
+                Developer
+                <br>
+                Conten Creator
+            </p>
+            <div class="socials">
+              <span>IG</span> • <span>LI</span> • <span>GH</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="card-inner">
+            <div class="image-wrapper">
+              <img src="image/dev3.jpg" alt="Developer 3">
+            </div>
+            <h3>Nabila elfalina herawan</h3>
+            <p class="role">
+                UI/UX desainer
+                <br>
+                Developer
+                <br>
+                Conten Creator
+            </p>
+            <div class="socials">
+              <span>IG</span> • <span>LI</span> • <span>GH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-footer">
+        <a href="dashboard.html" class="btn-back">← Kembali ke Beranda</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Inisialisasi Animasi Muncul
+    ScrollReveal().reveal('.team-card', { 
+      delay: 200, 
+      distance: '50px', 
+      origin: 'bottom', 
+      interval: 200 
+    });
+    ScrollReveal().reveal('.about-header', { delay: 100, origin: 'top', distance: '30px' });
+  </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kinokimi Coffee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/das.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="logo-ellipse">
+            <img src="image/logo.jpg" alt="Logo Kinokimi">
+        </div>
+        <span class="logo-text">Kinokimi Backyard</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ContacUs.html">Contact Us</a></li>
+        <li><a href="food.html">Menu</a></li>
+        <li>
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+            </a>
+        </li>
+    </ul> 
+</nav>
+
+<section class="hero-box">
+  <div class="hero-profile">
+    <div class="profile-photo">
+      <img src="image/prop.jpg" alt="Kendall Jenner">
+    </div>
+
+    <div class="profile-info">
+      <h4>Kendall Jenner</h4>
+      <p>@kendaljenner</p>
+      <a href="profile.html" class="profile-link">see more</a>
+    </div>
+  </div>
+
+  <div class="promo-banner">
+    <img src="image/banner.jpg" alt="Promo">
+    <div class="promo-text">
+      <h2>DISC <span>10%</span></h2>
+      <p>Mulai dari 28 – 31 desember</p>
+    </div>
+  </div>
+</section>
+
+<section class="section green">
+  <div class="container">
+    <h2>TOP CATEGORIES DRINK</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="image/minuman 1.jpg">
+        <p>Orange Coffee Brew</p>
+      </div>
+      <div class="card">
+        <img src="image/minuman 2.jpg">
+        <p>Rayu Manis</p>
+      </div>
+      <div class="card">
+        <img src="image/minuman 3.jpg">
+        <p>Lime Americano</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section beige">
+  <div class="container">
+    <h2>TOP CATEGORIES FOOD</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="image/makanan 2.jpg">
+        <p>Bread Berry Honey</p>
+      </div>
+      <div class="card">
+        <img src="image/makanan 3.jpg">
+        <p>Sirloin Chilin Celery</p>
+      </div>
+      <div class="card">
+        <img src="image/makanan 4.jpg">
+        <p>Rectangle Cheesecake</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section">
+  <h2 class="blog-title">OUR BLOG</h2>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn prev" onclick="slideBlog(-1)">‹</button>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        
+        <div class="blog-card">
+          <a href="https://share.google/hUyvOvh9psaIOWxbn" target="_blank" class="card-link">
+            <img src="image/blog 3.jpg">
+            <div class="blog-content">
+              <h3>Kinokimi Coffee: Cafe Nuansa Pink di Buah Batu</h3>
+              <span>agnesitopu.wordpress.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="blog-card">
+          <a href="https://share.google/UvRxBoYZKeBV2cjYP" target="_blank" class="card-link">
+            <img src="image/blog 1.jpg">
+            <div class="blog-content">
+              <h3>Kinokimi Coffee, Bandung: Kopi Enak, Cangkir Cantik dan Makanan Enak</h3>
+              <span>www.pergidulu.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="blog-card">
+          <a href="https://share.google/dXDyioq5HjcpKrMIe" target="_blank" class="card-link">
+            <img src="image/blog 2.png">
+            <div class="blog-content">
+              <h3>Cafe Ter-Pewe Se Bandung</h3>
+              <span>bandungfoodie.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="blog-card">
+          <a href="https://share.google/oWfHoWSdnTPemIdSz" target="_blank" class="card-link">
+            <img src="image/blog 4.png">
+            <div class="blog-content">
+              <h3>One Of The Best Cafe for WFC in Bandung</h3>
+              <span>bandungfoodie.com</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="carousel-btn next" onclick="slideBlog(1)">›</button>
+  </div>
+</section>
+
+<section class="info-section">
+  <p>
+    Café kami telah memperoleh sertifikasi halal resmi dan menjalankan seluruh
+    proses operasional sesuai dengan standar nasional yang berlaku. Mulai dari
+    pemilihan bahan baku, proses pengolahan, hingga penyajian makanan dan minuman,
+    seluruh tahapan dilakukan dengan memperhatikan aspek kebersihan, keamanan,
+    dan kualitas. Komitmen ini kami terapkan untuk memberikan pengalaman terbaik
+    serta rasa aman dan nyaman bagi setiap pelanggan yang berkunjung.
+  </p>
+</section>
+
+<section class="halal-section">
+  <div class="halal-content">
+    <img src="image/halal.png" alt="Halal Certified">
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>KinokimiBackyard.</h2>
+            <p>
+                Platform caffe marketplace yang memungkinkan kamu
+                menemukan menu dan sleramu sendiri secara digital.
+                Kami mempunyai pelayanan hingga barista caffe terbaik dan terpercaya.
+            </p>
+
+            <em class="footer-quote">Serving Warm Moments, One Sip at a Time.</em>
+
+            <a href="dev.html" class="footer-btn">
+                <i class="fa-regular fa-user"></i>
+                About Us & Developer Team
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <h4>HELP CENTER</h4>
+                <p>Butuh bantuan mendesak atau ingin bermitra?</p>
+
+                <div class="footer-contact">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>help@KinokimiCaffe.com</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+62 813-567-076 (Superadmin)</span>
+                </div>
+
+                <div class="footer-contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Bandung, Indonesia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line"></div>
+</footer>
+
+<script>
+let currentIndex = 0;
+
+function slideBlog(direction) {
+  const track = document.querySelector('.carousel-track');
+  const cards = document.querySelectorAll('.blog-card');
+  const container = document.querySelector('.carousel');
+  
+  // Lebar kartu + gap (30px)
+  const cardWidth = cards[0].offsetWidth + 30; 
+  
+  // Menghitung jumlah kartu yang muat di layar
+  const visibleCards = Math.floor(container.offsetWidth / cards[0].offsetWidth);
+  const maxIndex = cards.length - visibleCards;
+
+  currentIndex += direction;
+
+  // Batas scroll
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+  track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

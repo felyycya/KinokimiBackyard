@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Kinokimi Backyard</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <div class="logo-ellipse">
+            <img src="image/logo.jpg" alt="Logo">
+        </div>
+        <span class="logo-text">Kinokimi Backyard</span>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ContacUs.html">Contact Us</a></li>
+        <li><a href="food.html">Menu</a></li>
+        <li>
+           <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping cart"></i>
+        </a>
+    </li>
+</ul> 
+</nav>
+</header>
+
+<section class="category">
+    <a href="food.html" class="active">Food</a>
+    <a href="coffe.html">Coffee</a>
+    <a href="noncoffe.html">Non Coffee</a>
+</section>
+
+<section class="menu">
+    <div class="menu-card" onclick="location.href='detail.html'">
+        <img src="image/BEEF-STROGNALOF.jpg">
+        <div class="menu-info">
+            <h3>BEEF STROGNALOF</h3>
+            <p>Hidangan nasi dengan rasa gurih dan pedas merica yang di temani oleh daging sapi rempah.</p>
+            <span>Rp 62.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'BEEF STROGNALOF', 62000, 'image/BEEF-STROGNALOF.jpg')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail4.html'">
+        <img src="image/NASI LEMAK MELAYU.jpeg">
+        <div class="menu-info">
+            <h3>NASI LEMAK MELAYU</h3>
+            <p>Hidangan klasik khas Melayu dengan nasi gurih santan, sambal pedas manis, dan telur.</p>
+            <span>Rp 46.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'NASI LEMAK MELAYU')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail2.html'">
+        <img src="image/SWEDISH BEEF MEATBALL.jpeg">
+        <div class="menu-info">
+            <h3>SWEDISH BEEF MEATBALL</h3>
+            <p>Bola daging sapi lembut ala Swedia disajikan dengan creamy gravy sauce dan mashed potato.</p>
+            <span>Rp 62.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'SWEDISH BEEF MEATBALL')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail3.html'">
+        <img src="image/AMERIKAN BREAKFAST.jpeg">
+        <div class="menu-info">
+            <h3>AMERIKAN BREAKFAST</h3>
+            <p>Sarapan bergaya Amerika berisi telur, sosis, roti panggang, dan kentang goreng.</p>
+            <span>Rp 62.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'AMERIKAN BREAKFAST')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail3.html'">
+        <img src="image/AMERICAN BREAKFAST MUSROOM.jpg">
+        <div class="menu-info">
+            <h3>AMERICAN BREAKFAST MUSROOM</h3>
+            <p>Versi spesial dengan tambahan sautéed mushroom yang harum dan gurih ala Amerika.</p>
+            <span>Rp 65.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'AMERICAN BREAKFAST MUSROOM')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/POTATO CHICKENBALL.jpeg">
+        <div class="menu-info">
+            <h3>POTATO CHICKENBALL</h3>
+            <p>Bola-bola ayam dengan balutan kentang crispy di luar dan lembut di dalam.</p>
+            <span>Rp 35.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'POTATO CHICKENBALL')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/AGLIO OLIOO CHICKEN.jpeg">
+        <div class="menu-info">
+            <h3>AGLIO OLIOO CHICKEN</h3>
+            <p>Spaghetti dengan bumbu bawang putih, olive oil, dan potongan ayam gurih.</p>
+            <span>Rp 53.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'AGLIO OLIOO CHICKEN')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/CARBONARA CHICKEN.jpg">
+        <div class="menu-info">
+            <h3>CARBONARA CHICKEN</h3>
+            <p>Pasta creamy dengan saus carbonara lembut, potongan ayam juicy, dan parmesan.</p>
+            <span>Rp 53.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'CARBONARA CHICKEN')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/NASI AYAM RUJAK.jpeg">
+        <div class="menu-info">
+            <h3>NASI AYAM RUJAK</h3>
+            <p>Nasi hangat dengan ayam berbumbu rujak khas Indonesia yang pedas manis.</p>
+            <span>Rp 46.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'NASI AYAM RUJAK')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/kari.jpeg">
+        <div class="menu-info">
+            <h3>CURRY MUSROOM</h3>
+            <p>Daging sapi empuk dimasak dengan saus krim dan jamur khas Rusia.</p>
+            <span>Rp 62.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'CURRY MUSROOM')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/HOMADE BITTERBALLEN.jpeg">
+        <div class="menu-info">
+            <h3>HOMADE BITTERBALLEN</h3>
+            <p>Camilan khas Belanda berbentuk bola isi daging sapi cincang renyah.</p>
+            <span>Rp 35.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'HOMADE BITTERBALLEN')">+</div>
+    </div>
+
+    <div class="menu-card" onclick="location.href='detail-food.html'">
+        <img src="image/CROISSANT.jpeg">
+        <div class="menu-info">
+            <h3>CROISSANT</h3>
+            <p>Pastry berlapis lembut dan renyah dengan aroma mentega yang wangi.</p>
+            <span>Rp 35.000</span>
+        </div>
+        <div class="plus" onclick="addToCart(event, 'CROISSANT')">+</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <h2>KinokimiBackyard.</h2>
+            <p>
+                Platform caffe marketplace yang memungkinkan kamu
+                menemukan menu dan sleramu sendiri secara digital.
+                Kami mempunyai chef caffe terbaik dan terpercaya.
+            </p>
+
+            <em>Curating Happiness, One Petal at a Time.</em>
+
+            <a href="dev.html" class="footer-btn">
+                <i class="fa-regular fa-user"></i>
+                About Us & Developer Team
+            </a>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <h4>HELP CENTER</h4>
+
+            <p>Butuh bantuan mendesak atau ingin bermitra?</p>
+
+            <div class="footer-contact">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <span>help@KinokimiCaffe.com</span>
+            </div>
+
+            <div class="footer-contact">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <span>+62 813-567-076 (Superadmin)</span>
+            </div>
+
+            <div class="footer-contact">
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <span>Bandung, Indonesia</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-line"></div>
+</footer>
+
+<!-- <script>
+    // Fungsi agar klik tombol plus tidak memicu pindah halaman detail
+    function addToCart(event, itemName) {
+        event.stopPropagation(); // Stop klik agar tidak tembus ke card
+        alert(itemName + " telah ditambahkan ke keranjang!");
+    }
+</script> -->
+
+<script>
+    // Fungsi untuk pindah ke halaman detail saat Card diklik
+    function goToDetail(url) {
+        window.location.href = url;
+    }
+
+    // Fungsi untuk tombol PLUS agar tidak memicu pindah halaman
+    function addToCart(event, itemName) {
+        // stopPropagation sangat penting agar klik tidak tembus ke menu-card
+        event.stopPropagation(); 
+        alert(itemName + " berhasil ditambahkan ke keranjang!");
+    }
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

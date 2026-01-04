@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef Strognalof - Desktop View</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="wide-card">
+        <div class="top-section">
+            <div class="nav-bar">
+    <a href="food.html" style="color: inherit; text-decoration: none;">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    <span class="header-title">Detail Menu</span>
+    <div></div> 
+</div>   
+            <div class="plate-container">
+                <img src="image/detail3.png" alt="SWEDISH BEEF MEATBALL">
+            </div>
+        </div>
+
+        <div class="bottom-content">
+            <div class="stats-row">
+                <span class="stat-tag">250 kalori</span>
+                <span class="stat-tag">20 minute</span>
+            </div>
+
+            <div class="main-info">
+                <div class="text-group">
+                    <h1 class="food-name">AMERICAN BREAKFAST MUSROOM</h1>
+                    <p class="price">Rp. 65.000</p>
+                </div>
+
+                <div class="counter-control">
+                    <button onclick="updateQty(-1)">-</button>
+                    <span id="qty">0</span>
+                    <button onclick="updateQty(1)">+</button>
+                </div>
+            </div>
+
+            <div class="description-area">
+                <h3>About Food</h3>
+                <p>
+                    Versi spesial dengan tambahan jamur tumis yang harum dan gurih, menambah cita rasa klasik ala Amerika. 
+                    Jamur yang digunakan biasanya ditumis  dengan mentega, bawang putih, dan bumbu halus lainnya hingga  
+                    mengeluarkan aroma yang khas dan tekstur yang lembut, menjadikannya  pelengkap yang kaya rasa untuk komponen 
+                    sarapan klasik lainnya seperti  telur, bacon, atau sosis
+                </p>
+            </div>
+
+            <div class="action-footer">
+                <button class="love-btn" onclick="toggleHeart()">
+                    <i class="fa-regular fa-heart" id="heartBtn"></i>
+                </button>
+                <button class="add-btn" onclick="addToCart()">ADD TO CHART</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/detail.js"></script>
+</body>
+</html>

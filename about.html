@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinokimi Backyard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="logo-ellipse">
+            <img src="image/logo.jpg" alt="Logo Kinokimi">
+        </div>
+        <span class="logo-text">Kinokimi Backyard</span>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="ContacUs.html">Contact Us</a></li>
+        <li><a href="food.html">Menu</a></li>
+        <li>
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+            </a>
+        </li>
+    </ul> 
+</nav>
+
+<header class="hero">
+    <div class="hero-title-box">
+        <h1>KINOKIMI BACKYARD</h1>
+        <span class="hero-subtitle">cafe dengan nuansa yang menyatu dengan alam dan klasik</span>
+    </div>
+    <img src="image/header.jpg" alt="Header Kinokimi">
+</header>
+
+<section class="about">
+    <img src="image/about.png" class="about-img" alt="About Image">
+    <div class="about-text">
+        <h2>About Kinokimi</h2>
+        <p>
+            Kinokimi backyard adalah kafe yang terletak di jalan buah batu yang menyajikan suasana berbeda dari kafe-kafe lainya.
+            Kafe ini di dominasi oleh tanaman dan pepohonan di setiap sudutnya serta atap kanopi bergaris yang menegaskan estetikanya, 
+            selain itu kafe ini mengusung open space coffee shop,
+            yang di lengkapi nuansa kayu dan vegetasi alami sehingga ambience tenang dan sejuknya terasa.
+            Coffe shop ini menawarkan beragam menu makanan, mulai dari makanan ringan hingga makanan berat yang tak kalah nikmat.
+        </p>
+        <div class="rating">
+            ⭐ ⭐ ⭐ ⭐ ⭐ <span>5.0</span>
+            <button class="btn-rate-us" onclick="openRating()">Berikan Rating</button>
+        </div>
+        <div class="section-divider"></div>
+    </div>
+</section>
+
+<div id="ratingModal" class="rating-modal">
+    <div class="rating-modal-content">
+        <span class="close-rating" onclick="closeRating()">&times;</span>
+        <h3>Berikan Penilaian Anda</h3>
+        <p>Seberapa puas Anda dengan Kinokimi?</p>
+        
+        <div class="stars-input">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5">⭐</label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4">⭐</label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3">⭐</label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2">⭐</label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1">⭐</label>
+        </div>
+        
+        <button class="submit-rating" onclick="submitRating()">Kirim Rating</button>
+    </div>
+</div>
+
+<section class="features">
+    <a href="food.html" class="feature-card">
+        <img src="image/menu.png" alt="Menu">
+        <h3>MENU</h3>
+    </a>
+
+    <a href="ContacUs.html" class="feature-card">
+        <img src="image/lok.png" alt="Location">
+        <h3>LOCATION</h3>
+    </a>
+
+    <a href="fac.html" class="feature-card">
+        <img src="image/fac.png" alt="Facility">
+        <h3>FACILITY</h3>
+    </a>
+</section>
+
+<section class="comments">
+    <div class="comment-header">
+        <span>COMMENTS</span>
+    </div>
+
+    <div class="comment-grid" id="commentList">
+        <div class="comment-card">
+            <div class="comment-profile">
+                <img src="image/feli.jpg">
+            </div>
+            <div class="comment-content">
+                <div class="comment-top">
+                    <h4>Felicia18</h4>
+                    <span class="comment-date">14 October 2024</span>
+                </div>
+                <p>" tempat hangout cozy di bandung! konsepnya outdoor namun nyaman dasn tidak panas, karena ada pohon" gitu walaupun gak gede. Bisa jd recommen u/satine."</p>
+            </div>
+        </div>
+
+        <div class="comment-card">
+            <div class="comment-profile">
+                <img src="image/feli.jpg">
+            </div>
+            <div class="comment-content">
+                <div class="comment-top">
+                    <h4>Nabila01</h4>
+                    <span class="comment-date">20 April 2024</span>
+                </div>
+                <p>ehhh.... gak sangka di buah batu ada kafe kecil yang bagus bngt kaya gini, tempatnya emng ga keliatan dari jalan raya sihh... bnr bnr tersembunyi</p>
+            </div>
+        </div>
+
+        <div class="comment-card">
+            <div class="comment-profile">
+                <img src="image/prop.jpg">
+            </div>
+            <div class="comment-content">
+                <div class="comment-top">
+                    <h4>N.jezy28</h4>
+                    <span class="comment-date">20 April 2024</span>
+                </div>
+                <p>"GIlakkkkk gak sangka bakalan nemu tempat sebagus dan se worth it ini, nuansanya adem bgt, kaya di lembang bahkan kaya di luar negri, kafenya ala jepang sama korea korean gtu loh.."</p>
+            </div>
+        </div>
+
+        <div class="comment-card">
+            <div class="comment-profile">
+                <img src="image/ara.jpg">
+            </div>
+            <div class="comment-content">
+                <div class="comment-top">
+                    <h4>agni_Ara</h4>
+                    <span class="comment-date">14 October 2024</span>
+                </div>
+                <p>Ambiencenya sejuk dan syahdu suka banget, cocok kalo mampir selepas kerja buat membuang penat. fav sih ini tempat terbaik"</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="comment-input-box">
+        <textarea id="commentText" placeholder="add your comment....."></textarea>
+        <button type="button" onclick="addComment()">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>KinokimiBackyard.</h2>
+            <p>Platform caffe marketplace yang memungkinkan kamu 
+                menemukan menu dan sleramu sendiri secara digital. 
+                Kami mempunyai pelayanan hingga barista 
+                caffe terbaik dan terpercaya.</p>
+            <em>Serving Warm Moments, One Sip at a Time.</em>
+            <a href="dev.html" class="footer-btn">
+                <i class="fa-regular fa-user"></i>
+                About Us & Developer Team
+            </a>
+        </div>
+
+        <div class="footer-right">
+            <h4>HELP CENTER</h4>
+            <p>Butuh bantuan mendesak atau ingin bermitra?</p>
+            <div class="footer-contact">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <span>help@KinokimiCaffe.com</span>
+            </div>
+            <div class="footer-contact">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <span>+62 813-567-076 (Superadmin)</span>
+            </div>
+            <div class="footer-contact">
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <span>Bandung, Indonesia</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line"></div>
+</footer>
+
+<script>
+    function openRating() {
+        document.getElementById("ratingModal").style.display = "flex";
+    }
+
+    function closeRating() {
+        document.getElementById("ratingModal").style.display = "none";
+    }
+
+    function submitRating() {
+        const selectedRating = document.querySelector('input[name="rating"]:checked');
+        if (selectedRating) {
+            alert("Terima kasih! Rating " + selectedRating.value + " bintang Anda telah terkirim.");
+            closeRating();
+        } else {
+            alert("Silakan pilih bintang terlebih dahulu.");
+        }
+    }
+
+    // Klik di luar kotak untuk menutup
+    window.onclick = function(event) {
+        let modal = document.getElementById("ratingModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Admin - Kelola Promo & Diskon</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2 class="sidebar-title">Kelola<br>Promo & Diskon</h2>
+    </div>
+    <ul class="nav-links">
+      <li class="nav-item" onclick="location.href='index.html'">Dashboard</li>
+      <li class="nav-item" onclick="location.href='menu.html'">Menu</li>
+      <li class="nav-item" onclick="location.href='pesanan.html'">Pesanan</li>
+      <li class="nav-item" onclick="location.href='pembayaran.html'">Pembayaran</li>
+      <li class="nav-item active" onclick="location.href='promo.html'">Promo</li>
+      <li class="nav-item" onclick="location.href='berita.html'">Berita</li>
+      <li class="nav-item" data-page="rating.html">Rating</li>
+      <li class="nav-item">Laporan</li>
+      <li class="nav-item">Pengaturan</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="user-info">
+        <span class="user-name">Hello, Admin</span>
+        <div class="avatar-wrapper">
+          <div class="avatar-circle"></div>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content-box promo-management">
+      <h3 class="page-inner-title">Kelola Promo & Diskon</h3>
+      <hr class="title-line">
+
+      <div class="promo-card-inner">
+        <table class="promo-table">
+  <thead>
+    <tr>
+      <th>Nama Promo</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="promoTableBody">
+    <tr>
+      <td>Diskon 20% Weekend</td>
+      <td>
+        <div class="status-actions">
+          <button class="btn-post">Post</button>
+          <button class="btn-hide" onclick="hapusBaris(this)">Hide</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Diskon 5% Happy Hour</td>
+      <td>
+        <div class="status-actions">
+          <button class="btn-post">Post</button>
+          <button class="btn-hide" onclick="hapusBaris(this)">Hide</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Buy 1 Get 1</td>
+      <td>
+        <div class="status-actions">
+          <button class="btn-post">Post</button>
+          <button class="btn-hide" onclick="hapusBaris(this)">Hide</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Birthday Treat</td>
+      <td>
+        <div class="status-actions">
+          <button class="btn-post">Post</button>
+          <button class="btn-hide" onclick="hapusBaris(this)">Hide</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+        <div class="add-button-container">
+          <button class="btn-tambah">Tambah</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+        <div id="modalTambah" class="modal">
+  <div class="modal-content">
+    <h4>Tambah Promo Baru</h4>
+    <input type="text" id="inputNamaPromo" placeholder="Masukkan nama promo...">
+    <div class="modal-buttons">
+      <button onclick="simpanPromo()" class="btn-tambah">Simpan</button>
+      <button onclick="tutupModal()" class="btn-hide">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

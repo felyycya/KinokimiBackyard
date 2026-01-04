@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Admin - Kelola Rating</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Rating</h2>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-item" data-page="index.html">Dashboard</li>
+            <li class="nav-item" data-page="kelola-menu.html">Menu</li>
+            <li class="nav-item" data-page="pesanan.html">Pesanan</li>
+            <li class="nav-item" data-page="pembayaran.html">Pembayaran</li>
+            <li class="nav-item" data-page="promo.html">Promo</li>
+            <li class="nav-item" data-page="berita.html">Berita</li>
+            <li class="nav-item active" data-page="rating.html">Rating</li>
+            <li class="nav-item">Laporan</li>
+            <li class="nav-item">Pengaturan</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="user-info">
+                <span class="user-name">Hello, Admin</span>
+                <div class="avatar-wrapper">
+                    <div class="avatar-circle"></div>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-box rating-management">
+            <div class="rating-header-inline">
+                <h3 class="inner-title">Kelola Rating</h3>
+                <span class="dots-icon">•••</span>
+            </div>
+            <hr class="title-line">
+
+            <div class="rating-list">
+                <div class="rating-item">
+                    <div class="user-avatar-rect">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="rating-details">
+                        <div class="rating-top">
+                            <h4>Agni</h4>
+                            <button class="btn-delete" onclick="hapusRating(this)"><i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                        <div class="stars">★★★★<span class="star-off">★</span></div>
+                        <p class="order-info">Matcha Signature & Homemade Bitterballen</p>
+                    </div>
+                </div>
+                <hr class="item-divider">
+
+                <div class="rating-item">
+                    <div class="user-avatar-rect">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="rating-details">
+                        <div class="rating-top">
+                            <h4>Felicia</h4>
+                            <button class="btn-delete" onclick="hapusRating(this)"><i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                        <div class="stars">★★★<span class="star-off">★★</span></div>
+                        <p class="order-info">Matcha Signature & Homemade Bitterballen</p>
+                    </div>
+                </div>
+                <hr class="item-divider">
+
+                <div class="rating-item">
+                    <div class="user-avatar-rect">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="rating-details">
+                        <div class="rating-top">
+                            <h4>Nabila</h4>
+                            <button class="btn-delete" onclick="hapusRating(this)"><i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p class="order-info">Aglio Olio Chicken & Cranberry Foam</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

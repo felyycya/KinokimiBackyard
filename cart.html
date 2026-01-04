@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Detail | Kinokimi</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <div class="logo-ellipse"><img src="image/logo.jpg"></div>
+        <span class="logo-text">KINOKIMI</span>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Contact.html">Contact us</a></li>
+        <li><a href="food.html">Menu</a></li>
+        <li><i class="fa-solid fa-cart-shopping cart"></i></li>
+    </ul>
+</header>
+
+<div class="order-header">ORDER DETAIL</div>
+
+<main class="cart-container">
+    <div id="cart-items-wrapper">
+        </div>
+
+    <div class="table-input-section" id="table-input-section">
+        <label for="table-number">TABLE : </label>
+        <input type="text" id="table-number" placeholder="...">
+    </div>
+
+    <div class="payment-section" id="payment-section">
+        <button class="payment-btn" onclick="processPayment()">PAYMENT</button>
+    </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+
+body {
+    background: linear-gradient(
+    to bottom,
+    #17392e 0%,
+    #000000 100%
+  );
+    color: white;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 999;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-ellipse {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;   /* 🔑 ini kuncinya */
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-ellipse img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background: rgba(19, 42, 34, 0.3); /* transparan */
+    backdrop-filter: blur(8px);        /* efek kaca */
+    -webkit-backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 999;
+
+    transition: background 0.3s ease;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.cart {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Badge Notif Merah */
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: none; /* Sembunyi jika 0 */
+}
+.order-header {
+    background: #d9d9d9;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 70px;
+    letter-spacing: 2px;
+}
+
+.cart-container {
+    padding: 20px 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-item {
+    background: #d9d9d9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.cart-item img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.cart-info {
+    padding: 15px;
+    flex: 1;
+    color: black;
+}
+
+.cart-info h3 { font-size: 1rem; margin-bottom: 5px; }
+.cart-info p { font-size: 0.9rem; font-weight: bold; }
+
+/* Control Quantity & Hapus */
+.qty-control {
+    background: #0f2a20;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.qty-control button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.btn-delete {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #8b0000;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Table Input */
+.table-input-section {
+    background: #d9d9d9;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    color: black;
+}
+
+.table-input-section input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 50px;
+    text-align: center;
+    outline: none;
+}
+
+/* Payment Button */
+.payment-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.payment-btn {
+    background: #d9d9d9;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Empty State */
+.empty-cart {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-cart a {
+    color: #cc922e;
+    text-decoration: underline;
+}

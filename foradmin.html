@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Forgot Password</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-container">
+  <div class="login-image">
+    <a href="lgnadm.html" class="back-btn">
+    ← Back
+  </a>
+    <img src="image/login.jpg" alt="Coffee">
+  </div>
+
+  <div class="login-form">
+   <div class="logo">
+     <img src="image/logo.jpg" alt="Logo">
+   </div>
+
+    <form onsubmit="return forgotValidate()">
+
+      <div class="input-group">
+        <input type="email" id="forgotEmail" placeholder="Email">
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="newPassword" placeholder="Create New Password">
+      </div>
+
+      <div class="input-group password-group">
+        <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+        <span onclick="togglePassword()"></span>
+      </div>
+
+      <button type="submit" class="btn-login">Create</button>
+      <a href="lgnadm.html"></a>
+
+    </form>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

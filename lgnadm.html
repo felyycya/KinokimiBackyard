@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="login-container">
+  <div class="login-image">
+    <a href="awal.html" class="back-btn">
+      ← Back
+    </a>
+    <img src="image/login.jpg" alt="Coffee">
+  </div>
+
+  <div class="login-form">
+    <div class="logo">
+      <img src="image/logo.jpg" alt="Logo">
+    </div>
+
+    <h2>Welcome, Please login to your account</h2>
+
+    <form action="index.html" method="GET">
+      <div class="input-group">
+        <input type="email" placeholder="Email address" required>
+      </div>
+
+      <div class="input-group password-group">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁</span>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="forgot.html">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-login">Login</button>
+    </form> </div>
+</div>
+
+<script>
+  // Fungsi sederhana untuk toggle password agar tetap berfungsi
+  function togglePassword() {
+    const passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+    } else {
+      passwordField.type = "password";
+    }
+  }
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

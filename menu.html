@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Admin - Kelola Menu</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+  <h2 class="sidebar-title">Kelola Menu</h2>
+  <ul class="nav-links">
+    <li class="nav-item" onclick="location.href='index.html'">Dashboard</li>
+    <li class="nav-item active" onclick="location.href='menu.html'">Menu</li>
+    <li class="nav-item" onclick="location.href='pesanan.html'">Pesanan</li>
+    <li class="nav-item" onclick="location.href='pembayaran.html'">Pembayaran</li>
+    <li class="nav-item" onclick="location.href='promo.html'">Promo</li>    
+    <li class="nav-item" onclick="location.href='berita.html'">Berita</li>
+    <li class="nav-item" data-page="rating.html">Rating</li>
+    <li class="nav-item">Laporan</li>
+    <li class="nav-item">Pengaturan</li>
+  </ul>
+</aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="user-info">
+        <span class="user-name">Hello, Admin</span>
+        <div class="avatar-wrapper">
+          <div class="avatar-circle"></div>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="content-box menu-management">
+      <h3 class="page-inner-title">Kelola Menu</h3>
+      <hr class="title-line">
+
+      <div class="menu-category-section">
+        <div class="category-header">Coffee</div>
+        <table class="menu-table">
+          <thead>
+            <tr>
+              <th>Nama Menu</th>
+              <th>Harga</th>
+              <th>Tindakan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <script>
+              const coffeeMenu = [
+                ["Kinokimi Signature", "Rp 35.080,80"],
+                ["Kinokimi Tokyo Latte", "Rp 35.080,80"],
+                ["Kinokimi Mocca", "Rp 32.080,80"],
+                ["Kinokimi Japanese", "Rp 35.080,80"],
+                ["Kinokimi Caramel", "Rp 38.080,80"],
+                ["Black Coffee Brazil", "Rp 28.080,80"]
+              ];
+              
+              coffeeMenu.forEach(item => {
+                document.write(`
+                  <tr>
+                    <td>${item[0]}</td>
+                    <td>${item[1]}</td>
+                    <td class="action-cell">
+                      <div class="action-group">
+                        <button class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
+                        <button class="btn-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                      </div>
+                    </td>
+                  </tr>
+                `);
+              });
+            </script>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="menu-category-section">
+        <div class="category-header">Non Coffee</div>
+        <table class="menu-table">
+          <thead><tr><th>Nama Menu</th><th>Harga</th><th>Tindakan</th></tr></thead>
+          <tbody>
+            <script>
+              const nonCoffee = [
+                ["Summer Pink", "Rp 38.080,80"],
+                ["Cranberry Foam", "Rp 38.080,80"],
+                ["Hazelnut Ice", "Rp 38.080,80"],
+                ["Matcha Signature", "Rp 40.080,80"],
+                ["Yellow Coldpress", "Rp 40.080,80"],
+                ["Local Beer", "Rp 40.080,80"]
+              ];
+              nonCoffee.forEach(item => {
+                document.write(`
+                  <tr>
+                    <td>${item[0]}</td><td>${item[1]}</td>
+                    <td class="action-cell"><div class="action-group">
+                      <button class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
+                      <button class="btn-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
+                    </div></td>
+                  </tr>
+                `);
+              });
+            </script>
+          </tbody>
+        </table>
+      </div>
+    
+    <div class="menu-category-section">
+  <div class="category-header">Food</div> <table class="menu-table">
+    <thead>
+      <tr>
+        <th>Nama Menu</th>
+        <th>Harga</th>
+        <th>Tindakan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <script>
+        const foodMenu = [
+          ["Beef Stroganoff", "Rp 62.080,80"],
+          ["Swedish Beef Meatball", "Rp 52.080,80"],
+          ["American Breakfast Mushroom", "Rp 65.080,80"],
+          ["Agli Olio Chicken", "Rp 53.080,80"],
+          ["Nasi Ayam Rujak", "Rp 46.080,80"],
+          ["Homemade Bitterballen", "Rp 35.080,80"],
+          ["Nasi Lemak Melayu", "Rp 46.080,80"],
+          ["American Breakfast", "Rp 62.080,80"],
+          ["Potato Chickenball", "Rp 35.080,80"],
+          ["Carbonara Chicken", "Rp 53.080,80"],
+          ["Curry Mushroom", "Rp 42.080,80"],
+          ["Croissant", "Rp 25.080,80"]
+        ];
+
+        foodMenu.forEach(item => {
+          document.write(`
+            <tr>
+              <td>${item[0]}</td>
+              <td>${item[1]}</td>
+              <td class="action-cell">
+                <div class="action-group">
+                  <button class="btn-icon" title="Edit">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                  </button>
+                  <button class="btn-icon" title="View">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          `);
+        });
+      </script>
+    </tbody>
+  </table>
+</div>
+    </section>
+  </main>
+</div>
+<script src="js/admin.js"></script>
+</body>
+</html>

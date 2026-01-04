@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Admin - Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+  <h2 class="sidebar-title">Cafe Admin</h2>
+ <ul class="nav-links">
+  <li class="nav-item active" onclick="location.href='index.html'">Dashboard</li>
+  <li class="nav-item" onclick="location.href='menu.html'">Menu</li>
+  <li class="nav-item" onclick="location.href='pesanan.html'">Pesanan</li>
+  <li class="nav-item" onclick="location.href='pembayaran.html'">Pembayaran</li>
+  <li class="nav-item" onclick="location.href='promo.html'">Promo</li>
+  <li class="nav-item" onclick="location.href='berita.html'">Berita</li>
+  <li class="nav-item" data-page="rating.html">Rating</li>
+  <li class="nav-item">Laporan</li>
+  <li class="nav-item">Pengaturan</li>
+</ul>
+</aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="user-info">
+        <span class="user-name">Hello, Admin</span>
+        <div class="avatar-wrapper">
+          <div class="avatar-circle"></div>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="stats-container">
+      <div class="stat-card">
+        <p class="stat-label">Penjualan hari ini</p>
+        <h3 class="stat-value">Rp 1.250.000,00</h3>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Pesanan Masuk</p>
+        <h3 class="stat-value">23 Order</h3>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h4 class="box-title">Menu Terlaris</h4>
+      <div class="menu-terlaris-wrapper">
+        <ol class="menu-text-list">
+          <li>Matcha Signature</li>
+          <li>Beef Stroganoff</li>
+          <li>Potato Chicken Box</li>
+        </ol>
+        <div class="menu-images">
+          <div class="image-placeholder"></div>
+          <div class="image-placeholder"></div>
+          <div class="image-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <h4 class="box-title">Daftar Pesanan Terbaru</h4>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Menu</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Agni</td>
+              <td>Latte Machiato</td>
+              <td>Rp 25.000</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Dina</td>
+              <td>Americano</td>
+              <td>Rp 20.000</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Asep</td>
+              <td>Cappucino</td>
+              <td>Rp 25.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="footer-action">
+      <button class="btn-report">Lihat Laporan Penjualan</button>
+    </div>
+  </main>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
